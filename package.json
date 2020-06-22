@@ -1,8 +1,8 @@
 {
-  "name": "dat-ignore",
-  "description": "default ignore for dat",
-  "version": "2.1.2",
-  "author": "Dat Project contributors",
+  "name": "dweb-ignore",
+  "description": "Library for parsing dWeb ignore files.",
+  "version": "1.0.0",
+  "author": "dweb Project contributors",
   "bugs": {
     "url": "https://github.com/datproject/dat-ignore/issues"
   },
