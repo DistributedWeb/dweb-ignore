@@ -1,14 +1,14 @@
-# dat-ignore
+# dweb-ignore
 
-> default ignore for dat
+> default ignore for dweb
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 
-Check if a file should be ignored for Dat:
+Check if a file should be ignored for DWeb:
 
-* Ignore `.dat` by default
+* Ignore `.dweb` by default
 * Use the `.datignore` file
 * Optionally ignore all hidden files
 * Add in other custom ignore matches
@@ -16,18 +16,18 @@ Check if a file should be ignored for Dat:
 ## Install
 
 ```
-npm install dat-ignore
+npm install dweb-ignore
 ```
 
 ## Usage
 
 ```js
-var datIgnore = require('dat-ignore')
+var datIgnore = require('dweb-ignore')
 var ignore = datIgnore('/data/dir')
 
-console.log(ignore('.dat')) // true
+console.log(ignore('.dweb')) // true
 console.log(ignore('.git')) // true
-console.log(ignore('dat-data')) // false
+console.log(ignore('dweb-data')) // false
 console.log(ignore('cat.jpg')) // false
 ```
 
@@ -55,7 +55,7 @@ var ignore = datIgnore('/data/dir', {
 var ignore = datIgnore('/data/dir', { ignoreHidden: false })
 ```
 
-####  Change Dat Ignore Path
+####  Change DWeb Ignore Path
 
 ```js
 var ignore = datIgnore('/data/dir', {
@@ -82,7 +82,7 @@ var ignore = datIgnore('/data/dir', { datignore: datIgnoreFile })
 Returns a function that checks if a path should be ignored:
 
 ```js
-ignore('.dat') // true
+ignore('.dweb') // true
 ignore('.git') // true
 ignore('data/cats.csv') // false
 ```
@@ -103,9 +103,9 @@ ignore('data/cats.csv') // false
 
 [MIT](LICENSE.md)
 
-[npm-image]: https://img.shields.io/npm/v/dat-ignore.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/dat-ignore
-[travis-image]: https://img.shields.io/travis/datproject/dat-ignore.svg?style=flat-square
-[travis-url]: https://travis-ci.org/datproject/dat-ignore
+[npm-image]: https://img.shields.io/npm/v/dweb-ignore.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/dweb-ignore
+[travis-image]: https://img.shields.io/travis/datproject/dweb-ignore.svg?style=flat-square
+[travis-url]: https://travis-ci.org/datproject/dweb-ignore
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard

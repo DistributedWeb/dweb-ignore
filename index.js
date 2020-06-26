@@ -6,25 +6,25 @@ var match = require('anymatch')
 module.exports = ignore
 
 function ignore (dir, opts) {
-  assert.strictEqual(typeof dir, 'string', 'dat-ignore: directory required')
+  assert.strictEqual(typeof dir, 'string', 'dweb-ignore: directory required')
   opts = Object.assign({
     datignorePath: path.join(dir, '.datignore')
   }, opts)
   dir = path.resolve(dir)
 
-  var allow = ['!**/.well-known/dat', '!.well-known/dat']
+  var allow = ['!**/.well-known/dweb', '!.well-known/dweb']
   var ignoreMatches = opts.ignore // we end up with array of ignores here
     ? Array.isArray(opts.ignore)
       ? opts.ignore
       : [opts.ignore]
     : []
 
-  var defaultIgnore = [/^(?:\/.*)?\.dat(?:\/.*)?$/, '.DS_Store', '**/.DS_Store'] // ignore .dat (and DS_Store)
+  var defaultIgnore = [/^(?:\/.*)?\.dweb(?:\/.*)?$/, '.DS_Store', '**/.DS_Store'] // ignore .dweb (and DS_Store)
   var ignoreHidden = !(opts.ignoreHidden === false) ? [/(^\.|\/\.).*/] : null // ignore hidden files anywhere
   var datIgnore = !(opts.useDatIgnore === false) ? readDatIgnore() : null
 
   // Add ignore options
-  ignoreMatches = ignoreMatches.concat(defaultIgnore) // always ignore .dat folder
+  ignoreMatches = ignoreMatches.concat(defaultIgnore) // always ignore .dweb folder
   if (datIgnore) ignoreMatches = ignoreMatches.concat(datIgnore) // add .datignore
   if (ignoreHidden) ignoreMatches = ignoreMatches.concat(ignoreHidden) // ignore all hidden things
   ignoreMatches = ignoreMatches.concat(allow)

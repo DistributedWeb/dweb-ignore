@@ -4,21 +4,21 @@
   "version": "1.0.0",
   "author": "dweb Project contributors",
   "bugs": {
-    "url": "https://github.com/datproject/dat-ignore/issues"
+    "url": "https://github.com/datproject/dweb-ignore/issues"
   },
   "devDependencies": {
     "standard": "*",
     "tape": "^4.10.1"
   },
-  "homepage": "https://github.com/datproject/dat-ignore",
+  "homepage": "https://github.com/datproject/dweb-ignore",
   "keywords": [
-    "dat"
+    "dweb"
   ],
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/datproject/dat-ignore.git"
+    "url": "https://github.com/datproject/dweb-ignore.git"
   },
   "scripts": {
     "test": "standard && tape test/*.js"
